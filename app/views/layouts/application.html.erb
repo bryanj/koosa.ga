@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>KoosaGa</title>
+    <title>BOJ Tier</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -9,6 +9,22 @@
   </head>
 
   <body>
-    <%= yield %>
+    <div id="layout">
+      <div id="menu">
+        <div class="pure-menu">
+          <a class="pure-menu-heading" href="/">BOJ Tier</a>
+          <ul class="pure-menu-list">
+            <li class="pure-menu-item"><a class="pure-menu-link" href="#">Login</a></li>
+            <li class="pure-menu-item menu-item-divided"><a class="pure-menu-link" href="#">Status</a></li>
+            <li class="pure-menu-item"><a class="pure-menu-link" href="#">Recommends</a></li>
+            <li class="pure-menu-item menu-item-divided"><a class="pure-menu-link" href="#">Ranking</a></li>
+            <li class="pure-menu-item"><a class="pure-menu-link" href="#">Problems</a></li>
+          </ul>
+        </div>
+      </div>
+      <div id="main">
+        <%= yield %>
+      </div>
+    </div>
   </body>
 </html>
