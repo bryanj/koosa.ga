@@ -6,13 +6,20 @@ class UsersController < ApplicationController
 
   def show
     @user = User.where(username: params[:username]).first
+    render action: :error if @user.nil?
   end
 
   def login
   end
 
   def login_proc
-    session[:username] = params[:username]
-    redirect_to :root
+    user = User.where(username: params[:username]).first
+    if user
+      session[:username] = params[:username]
+      session[:user_id] = user.id
+      redirect_to :root
+    else
+      render action: :error
+    end
   end
 end
