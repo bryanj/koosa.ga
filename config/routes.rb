@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   get "/users/:username", to: "users#show"
   get "/problems", to: "problems#index"
   get "/problems/:level", to: "problems#show"
+  get "/recommend", to: "problems#recommend"
   get "/login", to: "users#login"
   post "/login", to: "users#login_proc"
 end
