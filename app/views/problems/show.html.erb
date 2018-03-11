@@ -1,0 +1,40 @@
+<div class="header">
+  <h1>☆<%= @level %></h1>
+  <h2></h2>
+</div>
+<div class="content">
+  <div class="pure-g">
+    <div class="pure-u-1-2">
+      <h2>Unsolved</h2>
+      <table class="pure-table pure-table-bordered">
+        <thead>
+          <tr><th>#</th><th>☆</th></tr>
+        </thead>
+        <tbody>
+<% @unsolved.each do |p| %>
+          <tr>
+            <td><a href="https://www.acmicpc.net/problem/<%= p.id %>" target="_blank"><%= p.id %></a></td>
+            <td><%= p.level / 100.0 %></td>
+          </tr>
+<% end %>
+        </tbody>
+      </table>
+    </div>
+    <div class="pure-u-1-2">
+      <h2>Solved</h2>
+      <table class="pure-table pure-table-bordered">
+        <thead>
+          <tr><th>#</th><th>☆</th></tr>
+        </thead>
+        <tbody>
+<% @solved.each do |p| %>
+          <tr>
+            <td><a href="https://www.acmicpc.net/problem/<%= p.id %>" target="_blank"><%= p.id %></a></td>
+            <td><%= p.level / 100.0 %></td>
+          </tr>
+<% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

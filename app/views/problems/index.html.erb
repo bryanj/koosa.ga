@@ -1,0 +1,24 @@
+<div class="header">
+  <h1>Problem Distribution</h1>
+  <h2></h2>
+</div>
+<div class="content">
+  <table class="pure-table pure-table-bordered">
+    <thead>
+      <tr><th>☆</th><th>#</th><th></th></tr>
+    </thead>
+    <tbody>
+<% @count.each_with_index do |c, i| %>
+      <tr>
+        <td><a href="/problems/<%= i %>"><%= i %></a></td>
+        <td><%= c[0] %> / <%= c[1] %> (<%= c[0] * 100 / c[1] rescue 0 %>%)</td>
+        <td>
+          <div style="width:<%= c[1] * 2 %>px; height: 20px; background-color:#ccc;">
+            <div style="width:<%= c[0] * 2 %>px; height: 20px; background-color:#0c0;"></div>
+          </div>
+        </td>
+      </tr>
+<% end %>
+  </tbody>
+</table>
+</div>
