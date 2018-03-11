@@ -1,0 +1,19 @@
+<div class="header">
+  <h1>Ranking</h1>
+</div>
+<div class="content">
+  <table class="pure-table pure-table-bordered">
+    <thead>
+      <tr><th>#</th><th>User</th><th>Tier</th></tr>
+    </thead>
+    <tbody>
+<% @users.each do |u| %>
+      <tr>
+        <td><%= u.rank %></td>
+        <td><a href="/users/<%= u.username %>"><%= u.username %></a></td>
+        <td><%= u.tier / 100 %> (<%= u.tier % 100%>%)</td>
+      </tr>
+<% end %>
+    </tbody>
+  </table>
+</div>

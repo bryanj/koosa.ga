@@ -15,9 +15,9 @@
           <a class="pure-menu-heading" href="/">BOJ Tier</a>
           <ul class="pure-menu-list">
             <li class="pure-menu-item"><a class="pure-menu-link" href="/login"><%= session[:username] || "Login" %></a></li>
-            <li class="pure-menu-item menu-item-divided"><a class="pure-menu-link" href="#">Status</a></li>
+            <li class="pure-menu-item menu-item-divided"><a class="pure-menu-link" href="<%= if session[:username] then "/users/#{session[:username]}" else "/login" end %>">Status</a></li>
             <li class="pure-menu-item"><a class="pure-menu-link" href="#">Recommends</a></li>
-            <li class="pure-menu-item menu-item-divided"><a class="pure-menu-link" href="#">Ranking</a></li>
+            <li class="pure-menu-item menu-item-divided"><a class="pure-menu-link" href="/users">Ranking</a></li>
             <li class="pure-menu-item"><a class="pure-menu-link" href="#">Problems</a></li>
           </ul>
         </div>
