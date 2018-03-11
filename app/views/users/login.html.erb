@@ -1,0 +1,9 @@
+<div class="header">
+  <h1>Login</h1>
+  <h2>Enter your id to login</h2>
+</div>
+<div class="content">
+  <%= form_tag do %>
+    <p>ID: <%= text_field_tag "username", session[:username] %><input type="submit" value="Login"></p>
+  <% end %>
+</div>
