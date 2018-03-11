@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: 1
+  problem_id: 1
+  memory: 1
+  time: 1
+  language: MyString
+  length: 1
+
+two:
+  user_id: 1
+  problem_id: 1
+  memory: 1
+  time: 1
+  language: MyString
+  length: 1
